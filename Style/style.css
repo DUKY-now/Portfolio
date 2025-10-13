@@ -1,45 +1,204 @@
-body {
-    font-family: Arial, sans-serif;
+/* === Base === */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
+body {
+    color: #333;
+    background-color: #f5f5f5;
+    scroll-behavior: smooth;
+}
+
+/* === Navbar === */
 header {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: background 0.3s;
 }
 
-header nav ul {
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+}
+
+#logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+
+nav ul {
     list-style: none;
-    padding: 0;
+    display: flex;
 }
 
-header nav ul li {
-    display: inline;
-    margin: 0 15px;
+nav ul li {
+    margin-left: 20px;
 }
 
-header nav ul li a {
-    color: white;
+nav ul li a {
+    color: #fff;
     text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
 }
 
-section {
-    padding: 50px;
+nav ul li a:hover {
+    color: #ff6b6b;
+}
+
+/* === Hero Section === */
+.hero {
+    height: 100vh;
+    background: url('images/hero.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
     text-align: center;
+}
+
+.hero h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    padding: 12px 25px;
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #ff4b4b;
+}
+
+/* === Sections === */
+section {
+    padding: 100px 10%;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* === Projets === */
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
 
 .project {
-    border: 1px solid #ccc;
-    margin: 20px;
+    background: white;
     padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 0.6s ease;
 }
 
-footer {
-    background-color: #333;
+.project img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.project a {
+    color: #ff6b6b;
+    text-decoration: none;
+}
+
+.project a:hover {
+    text-decoration: underline;
+}
+
+/* === Contact Form === */
+form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea {
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+button {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff6b6b;
     color: white;
-    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #ff4b4b;
+}
+
+/* === Footer === */
+footer {
     text-align: center;
+    padding: 20px 0;
+    background-color: #1a1a1a;
+    color: white;
+    margin-top: 40px;
+}
+
+footer .socials a {
+    color: white;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+footer .socials a:hover {
+    color: #ff6b6b;
+}
+
+/* === Animations === */
+.fade-in.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* === Responsive === */
+@media(max-width: 768px) {
+    .project-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        display: none;
+    }
 }
