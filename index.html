@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon Portfolio</title>
-    <link rel="stylesheet" href="Style/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Mon Nom</h1>
+    <!-- Header / Navbar -->
+    <header id="header">
         <nav>
+            <h1 id="logo">Stéphane</h1>
             <ul>
+                <li><a href="#home">Accueil</a></li>
                 <li><a href="#about">À propos</a></li>
                 <li><a href="#projects">Projets perso & pro </a></li>
                 <li><a href="#CV">CV & Compétences</a></li>
@@ -20,37 +22,31 @@
         </nav>
     </header>
 
-    <section id="about">
+    <!-- Section Accueil -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Bonjour, je suis <span>Stéphane</span></h2>
+            <p>Développeur web & créateur digital. Découvrez mes projets et compétences.</p>
+            <a href="#projects" class="btn">Voir mes projets</a>
+        </div>
+    </section>
+
+    <!-- Section À propos -->
+    <section id="about" class="fade-in">
         <h2>À propos de moi</h2>
-        <p>Je suis en BTS SIO (Services Informatiques aux Organisations), en option SLAM (Solutions Logicielles et Applications Métiers).
-            J'ai choisi cette voie car j'ai fait 1 an a Piktura (metre logo), et pendant cette année j'ai pu faire du développement, mais les autres cours ne m'interessaient plus, et je trouvais ca très ennuyant
-            Je me suis donc réorienté vers le BTS SIO de Dampierre. Et j'ai choisi l'option SLAM car je prefere le développement web, et d'application puisque je trouve ca plus simple a comprendre que la gestion des réseaux. 
-        </p>
+        <p>Je suis développeur web passionné par la création de sites et d’applications.</p>
     </section>
 
     <section id="projects">
         <h2>Mes projets</h2>
         <div class="project">
             <h3>Projet 1</h3>
-            <p>Mon premier projet a été de réaliser une application pour gerer les élections.</p>
-            <p>Pour réaliser le projet j'ai utilisé Scene Builder pour créer les interfaces graphiques. Et j'ai codé mon application en java.</p>
-            <p>Malheureusement je n'ai pas pu terminer completement mon application car je n'ai pas su gérer mon temps, mais les fonctionnalités de base comme une connection avec un login et mdp, ajout de voix et compte de voix pour les candidats ont étés implémentées.</p>
+            <p>Description du projet.</p>
         </div>
         <div class="project">
             <h3>Projet 2</h3>
             <p>Description du projet.</p>
         </div>
-
-
-    <h2>Experiences Professionnelles</h2>
-    <div class="pro">
-        <h3>Stage:</h3>        
-        <li><p>J'ai eu la chance de faire plusieurs stage a la mairie de Raismes, au serivce Informatiques.</p></li>
-        <li><p>Lors de mon premier stage en 2018 je n'ai pas fait grand chose, mais j'ai découvert un peu le monde du travail.</p></li>
-        <li><p>Lors de mon second stage en 2021, j'ai eu plusieurs taches comme répertorier les composants d'un ordinateur et noter ce qu'il fallait faire pour sa maintenance, j'ai aussi eu la chance d'essayer l'impression 3D.</p></li>
-        <li><p>Ensuite pour mon 3ème stage de fin mai a début juillet 2025, j'ai eu la tâche de réaliser une application pour les elections. J'ai réaliser cette tâche en java, et j'ai utilisé scene builder pour creer les pages de mon application.</p></li>
-        <li><P>Et pour finir du 17 Novembre au 19 Décembre 2025, j'ai effectué des tâches comme:</li>
-    </div>
     </section>
 <section id="CV">
     <h2>Mon CV et mes Compétences</h2>
@@ -65,13 +61,27 @@
 </section>
 
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email : monemail@example.com</p>
+    <!-- Section Contact -->
+    <section id="contact" class="fade-in">
+        <h2>Contactez-moi</h2>
+        <form id="contactForm">
+            <input type="text" placeholder="Votre nom" required>
+            <input type="email" placeholder="Votre email" required>
+            <textarea placeholder="Votre message" required></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
     </section>
 
+    <!-- Footer -->
     <footer>
-        <p>© 2025 Mon Nom</p>
+        <p>&copy; 2025 Stéphane. Tous droits réservés.</p>
+        <div class="socials">
+            <a href="#">LinkedIn</a> |
+            <a href="#">GitHub</a> |
+            <a href="#">Twitter</a>
+        </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
