@@ -35,3 +35,45 @@ const appearOnScroll = new IntersectionObserver((entries, observer) => {
 faders.forEach(fader => {
     appearOnScroll.observe(fader);
 });
+    
+// Lightbox pour les images
+    const images = document.querySelectorAll('.zoomable');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeBtn = document.querySelector('#lightbox .close');
+
+    // Quand on clique sur l'image → ouvrir la popup
+    images.forEach(img => {
+        img.addEventListener('click', () => {
+            lightbox.style.display = 'flex';
+            lightboxImg.src = img.src;
+        });
+    });
+
+    // Fermer en cliquant sur la croix
+    closeBtn.addEventListener('click', () => {
+        lightbox.style.display = 'none';
+    });
+
+    // Fermer en cliquant autour
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+            lightbox.style.display = 'none';
+        }
+    });
+    const projects = document.querySelectorAll('.project');
+
+    function revealProjects() {
+        const triggerBottom = window.innerHeight / 5 * 4;
+
+        projects.forEach(project => {
+            const projectTop = project.getBoundingClientRect().top;
+
+            if (projectTop < triggerBottom) {
+                project.classList.add('show');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', revealProjects);
+    window.addEventListener('load', revealProjects); // animation au chargement aussi

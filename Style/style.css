@@ -7,8 +7,8 @@
 }
 
 body {
-    color: #333;
-    background-color: #f5f5f5;
+    color: #000000;
+    background-color: #707070;
     scroll-behavior: smooth;
 }
 
@@ -45,14 +45,14 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
-    text-decoration: none;
+    color: #ffffff;
+    text-decoration-color: #ffffff;
     font-weight: 500;
     transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #ff6b6b;
+    color: #0400ff;
 }
 
 /* === Hero Section === */
@@ -62,8 +62,11 @@ nav ul li a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: rgb(0, 0, 0);
     text-align: center;
+}
+span{
+    color: #6c78ff;
 }
 
 .hero h2 {
@@ -78,7 +81,7 @@ nav ul li a:hover {
 
 .btn {
     padding: 12px 25px;
-    background-color: #ff6b6b;
+    background-color: #6c78ff;
     color: white;
     border: none;
     border-radius: 5px;
@@ -88,7 +91,7 @@ nav ul li a:hover {
 }
 
 .btn:hover {
-    background-color: #ff4b4b;
+    background-color: #0400ff;
 }
 
 /* === Sections === */
@@ -109,15 +112,17 @@ h2 {
     justify-content: center;
 }
 
+
+
 .project {
-    background: white;
+    background: rgb(255, 255, 255);
     padding: 20px;
     border-radius: 10px;
     width: 300px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     text-align: center;
     transform: translateY(50px);
-    opacity: 0;
+    opacity: 50;
     transition: all 0.6s ease;
 }
 
@@ -133,6 +138,12 @@ h2 {
 
 .project a:hover {
     text-decoration: underline;
+}
+
+/* Animation lorsqu'on ajoute la classe "show" */
+.project.show {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 /* === Contact Form === */
@@ -155,7 +166,7 @@ button {
     padding: 12px;
     border: none;
     border-radius: 5px;
-    background-color: #ff6b6b;
+    background-color: #6c78ff;
     color: white;
     font-size: 16px;
     cursor: pointer;
@@ -163,7 +174,7 @@ button {
 }
 
 button:hover {
-    background-color: #ff4b4b;
+    background-color: #0400ff;
 }
 
 /* === Footer === */
@@ -182,7 +193,7 @@ footer .socials a {
 }
 
 footer .socials a:hover {
-    color: #ff6b6b;
+    color: #6c78ff;
 }
 
 /* === Animations === */
@@ -203,8 +214,109 @@ footer .socials a:hover {
     }
 }
 
-.Images {
-    width: 80%;
+/* Taille de l'image dans la page */
+.Images img {
+    width: 300px; 
     height: auto;
-    margin: 20px 0;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+
+.Images img:hover {
+    transform: scale(1.03);
+}
+
+/* Lightbox en grand
+#lightbox {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(3px);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+#lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+} */
+
+
+/* Lightbox animée */
+#lightbox {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(3px);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* Animation zoom + fade */
+#lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    animation: zoomFade 0.35s ease;
+}
+
+/* @keyframes zoomFade {
+    0% {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+} */
+@keyframes pop {
+    0% { transform: scale(0.6); opacity: 0; }
+    70% { transform: scale(1.05); opacity: 1; }
+    100% { transform: scale(1); }
+}
+
+#lightbox img {
+    animation: pop 0.3s ease-out;
+}
+
+
+/* Bouton fermer */
+#lightbox .close {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    font-size: 50px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Bouton Download */
+#download-btn {
+    position: absolute;
+    bottom: 40px;
+    background: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 18px;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+#download-btn:hover {
+    background: #ddd;
 }
