@@ -43,3 +43,9 @@ footer {
     padding: 10px;
     text-align: center;
 }
+
+.Images {
+    width: 80%;
+    height: auto;
+    margin: 20px 0;
+}
