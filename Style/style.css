@@ -12,6 +12,13 @@ body {
     scroll-behavior: smooth;
 }
 
+#logo{
+    font-family: 'Arial Black', sans-serif;
+}
+.titre{
+    font-family: "calibri", sans-serif, 900;
+}
+
 /* === Navbar === */
 header {
     width: 100%;
