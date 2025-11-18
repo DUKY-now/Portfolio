@@ -272,13 +272,13 @@ footer .socials a:hover {
 }
 
 /* Animation zoom + fade */
-/* #lightbox img {
+ #lightbox img {
     max-width: 90%;
     max-height: 90%;
     border-radius: 10px;
     animation: zoomFade 0.35s ease;
 } 
- @keyframes zoomFade {
+ /* @keyframes zoomFade {
     0% {
         opacity: 0;
         transform: scale(0.7);
