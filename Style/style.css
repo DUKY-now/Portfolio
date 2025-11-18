@@ -278,7 +278,7 @@ footer .socials a:hover {
     border-radius: 10px;
     animation: zoomFade 0.35s ease;
 } 
- /* @keyframes zoomFade {
+ @keyframes zoomFade {
     0% {
         opacity: 0;
         transform: scale(0.7);
@@ -287,13 +287,13 @@ footer .socials a:hover {
         opacity: 1;
         transform: scale(1);
     }
-} */
+}
  
-@keyframes pop {
+/* @keyframes pop {
     0% { transform: scale(0.6); opacity: 0; }
     70% { transform: scale(1.05); opacity: 1; }
     100% { transform: scale(1); }
-}
+} */
 
 #lightbox img {
     animation: pop 0.3s ease-out;
