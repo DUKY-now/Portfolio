@@ -86,6 +86,23 @@ span{
     margin-bottom: 30px;
 }
 
+.apropos {
+    padding: 12px 25px;
+    margin: 0 10px;
+    background-color: #6c78ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.apropos:hover {
+    background-color: #0400ff;
+}
+
+
 .btn {
     padding: 12px 25px;
     background-color: #6c78ff;
@@ -255,6 +272,16 @@ footer .socials a:hover {
     border-radius: 10px;
 } */
 
+/* @keyframes zoomFade {
+    0% {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+ } */
 
 /* Lightbox animée */
 #lightbox {
@@ -272,28 +299,18 @@ footer .socials a:hover {
 }
 
 /* Animation zoom + fade */
- #lightbox img {
+#lightbox img {
     max-width: 90%;
     max-height: 90%;
     border-radius: 10px;
     animation: zoomFade 0.35s ease;
-} 
- @keyframes zoomFade {
-    0% {
-        opacity: 0;
-        transform: scale(0.7);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
 }
  
-/* @keyframes pop {
+@keyframes pop {
     0% { transform: scale(0.6); opacity: 0; }
     70% { transform: scale(1.05); opacity: 1; }
     100% { transform: scale(1); }
-} */
+}
 
 #lightbox img {
     animation: pop 0.3s ease-out;

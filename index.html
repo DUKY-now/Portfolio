@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Portfolio</title>
+    <title>Accueil</title>
     <link rel="stylesheet" href="Style/style.css">
 </head>
 <body>
@@ -34,9 +34,9 @@
     <!-- Section À propos -->
     <section id="about" class="fade-in">
         <h2 class="titre">À propos de moi</h2>
-        <p>Je suis en BTS SIO (Services Informatiques aux Organisations), en option SLAM (Solutions Logicielles et Applications Métiers).<br>
-            J'ai choisi cette voie car j'ai fait 1 an a Piktura (metre logo), et pendant cette année j'ai pu faire du développement, mais les autres cours ne m'interessaient plus, et je trouvais ca très ennuyant
-            Je me suis donc réorienté vers le BTS SIO de Dampierre.<br> Et j'ai choisi l'option SLAM car je prefere le développement web, et d'application puisque je trouve ca plus simple a comprendre que la gestion des réseaux. </p>
+<button class="apropos" onclick="window.location.href='personnel.html'">Qui je suis</button>
+<button class="apropos" onclick="window.location.href='parcours.html'">Mon parcours</button>
+<button class="apropos" onclick="window.location.href='pourquoi.html'">Pourquoi un BTS SIO ?</button>
     </section>
 
     <section id="projects">
@@ -58,10 +58,12 @@
         <div class="project">
             <h3 class="titre">Projet 3: Site Personnel</h3>
             <p>Ce projet la sera plus long, mais je voudrais crée un site comme mon portfolio.</p>
-            <br><p>Sur ce site j'y mettrais des choses que j'aime comme mes chats, les jeux aux quels j'ai joué et qui m'ont marqués, et les films.</p>
+            <br><p>Sur ce site j'y mettrais des choses que j'aime comme mes chats, les jeux aux quels j'ai joué et qui m'ont marqués, et les films. Je réalise aussi des photos quand je joue, ca me permettra de les affichers aussi.</p>
         </div>
+</section>
 
-        <h2 class="titre">Experiences Professionnelles</h2>
+<section>
+<h2 class="titre">Experiences Professionnelles</h2>
     <div class="pro">
         <h3 class="titre">Stage:</h3>        
         <li><p>J'ai eu la chance de faire plusieurs stage a la mairie de Raismes, au serivce Informatiques.</p></li>
@@ -70,23 +72,25 @@
         <li><p>Ensuite pour mon 3ème stage de fin mai a début juillet 2025, j'ai eu la tâche de réaliser une application pour les elections. J'ai réaliser cette tâche en java, et j'ai utilisé scene builder pour creer les pages de mon application.</p></li>
         <li><P>Et pour finir du 17 Novembre au 19 Décembre 2025, j'ai effectué des tâches comme:</li>
     </div>
+    <section>
     <div class="Images">
-        <a href="Style/Stage_Juin.jpg">
+        <a href="Style/Stage_Juin.jpg" class="lightbox">
         <img src="Style/Stage_Juin.jpg" alt="Stage de Juin 2025" class="zoomable"/>
         </a>
-        <a href="Style/Stage_Novembre.jpg">
-        <img src="Style/Stage_Novembre.jpg" alt="Stage de Novembre 2025" class="zoomable"/>
+        <a href="Style/Stage_Novembre.jpg" class="lightbox">
+        <img src="Style/Stage_Novembre.jpg" alt="A Venir" class="zoomable"/>
         </a>
     </div>
     </section>
+</section>
 
     <section>
         <h2 class="titre">Mon CV et mes Compétences</h2>
-        <div class="Images">
-            <a href="Style/CV_Stephane_Poupier.png">
+        <div id="CV"class="Images">
+            <a href="Style/CV_Stephane_Poupier.png" class="lightbox">
             <img src="Style/CV_Stephane_Poupier.png" alt="Mon CV" class="zoomable"/>
             </a>
-            <a href="Style/Portefeuille_Competences.png">
+            <a href="Style/Portefeuille_Competences.png" class="lightbox">
             <img src="Style/Portefeuille_Competences.png" alt="Mon portefeuille de Compétences"/>
             </a>
         </div>
@@ -101,8 +105,8 @@
 
     <section id="VTechno">  
         <h2 class="titre">Veille Technologique</h2>
-        <div><h3 class="titre">Mon sujet de veille technologique est : </h3>
-            <p>Pour réaliser ma veille, j'ai utilisé PearlTree</p>
+<button onclick="window.location.href='veille.html'">Ma veille Technologique</button>
+<button onclick="window.location.href='source.html'">Mes sources</button>
         </div>
     </section>
 
