@@ -96,12 +96,36 @@ span{
     text-decoration: none;
     font-weight: bold;
     transition: background 0.3s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .apropos:hover {
     background-color: #0400ff;
 }
 
+.conteneur-boutons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* espace entre les boutons */
+    flex-wrap: wrap; /* pour le responsive */
+}
+
+.VTechno {
+    padding: 12px 25px;
+    background-color: #6c78ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+    cursor: pointer;
+}
+
+.VTechno:hover {
+    background-color: #5562e0;
+}
 
 .btn {
     padding: 12px 25px;
