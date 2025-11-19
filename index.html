@@ -73,28 +73,35 @@
         <li><P>Et pour finir du 17 Novembre au 19 Décembre 2025, j'ai effectué des tâches comme:</li>
     </div>
     <section>
-    <div class="Images">
-        <a href="Style/Stage_Juin.jpg" class="lightbox">
-        <img src="Style/Stage_Juin.jpg" alt="Stage de Juin 2025" class="zoomable"/>
-        </a>
-        <a href="Style/Stage_Novembre.jpg" class="lightbox">
-        <img src="Style/Stage_Novembre.jpg" alt="A Venir" class="zoomable"/>
-        </a>
+    <div class="gallery">
+        <img src="Style/Stage_Juin.jpg" alt="Stage de Juin 2025" class="thumbnail" onclick="openPopup(this.src)"/>
+        <img src="Style/Stage_Novembre.jpg" alt="A Venir" class="thumbnail" onclick="openPopup(this.src)"/>
+    </div>
+    <div class="popup-overlay" id="popup" onclick="closePopup(event)">
+        <div class="popup-content">
+            <button class="close-btn" onclick="closePopup(event)">&times;</button>
+            <img src="" alt="Image agrandie" class="popup-image" id="popupImage">
+        </div>
     </div>
     </section>
 </section>
 
     <section>
         <h2 class="titre">Mon CV et mes Compétences</h2>
-        <div id="CV"class="Images">
-            <a href="Style/CV_Stephane_Poupier.png" class="lightbox">
-            <img src="Style/CV_Stephane_Poupier.png" alt="Mon CV" class="zoomable"/>
-            </a>
-            <a href="Style/Portefeuille_Competences.png" class="lightbox">
-            <img src="Style/Portefeuille_Competences.png" alt="Mon portefeuille de Compétences"/>
-            </a>
+        <!-- HTML -->
+<div class="gallery">
+  <img src="Style/CV_Stephane_Poupier.png" alt="CV" class="thumbnail" onclick="openPopup(this.src)"/>
+  <img src="Style/Portefeuille_Competences.png" alt="Compétences" class="thumbnail" onclick="openPopup(this.src)"/>
+</div>
+<div class="popup-overlay" id="popup" onclick="closePopup(event)">
+        <div class="popup-content">
+            <button class="close-btn" onclick="closePopup(event)">&times;</button>
+            <img src="" alt="Image agrandie" class="popup-image" id="popupImage">
         </div>
+    </div>
     </section>
+
+    
 
     <!-- Fenêtre lightbox (cachée par défaut) -->
 <div id="lightbox">
@@ -131,5 +138,25 @@
     </footer>
 
     <script src="script.js"></script>
+       <script>
+        function openPopup(imageSrc) {
+            const popup = document.getElementById('popup');
+            const popupImage = document.getElementById('popupImage');
+            popupImage.src = imageSrc;
+            popup.classList.add('active');
+        }
+
+        function closePopup(event) {
+            if (event.target.id === 'popup' || event.target.classList.contains('close-btn')) {
+                document.getElementById('popup').classList.remove('active');
+            }
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                document.getElementById('popup').classList.remove('active');
+            }
+        });
+    </script>
 </body>
 </html>

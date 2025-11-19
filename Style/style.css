@@ -239,7 +239,7 @@ footer .socials a:hover {
 }
 
 /* Taille de l'image dans la page */
-.Images img {
+/* .Images img {
     width: 300px; 
     height: auto;
     cursor: pointer;
@@ -249,7 +249,18 @@ footer .socials a:hover {
 
 .Images img:hover {
     transform: scale(1.03);
-}
+} */
+
+        .Images img {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(20px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .Images img:hover {
+            transform: scale(1.05);
+        }
 
 /* Lightbox en grand
 #lightbox {
@@ -344,3 +355,45 @@ footer .socials a:hover {
 #download-btn:hover {
     background: #ddd;
 }
+
+        .thumbnail {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+
+        .thumbnail:hover {
+            transform: scale(1.05);
+        }
+
+        .popup-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup-overlay.active {
+            display: flex;
+        }
+
+        .popup-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        .popup-image {
+            max-width: 100%;
+            max-height: 90vh;
+            border-radius: 8px;
+        }

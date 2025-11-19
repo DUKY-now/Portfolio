@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon parcours</title>
-        <link rel="stylesheet" href="Style/veille.css">
+        <link rel="stylesheet" href="Style/style.css">
 </head>
 <body class="body">
 <!-- Header / Navbar -->
@@ -21,8 +21,73 @@
             </ul>
         </nav>
     </header>
+    
 <section>
-<h2 class="titre"> </h2>
+<h2 class="titre">Ma veille Technologique</h2>
+<button class="apropos" onclick=>C'est quoi ?</button>
+<div class="titre-texte">
+<h3>Pour ma veille Technologique j'ai choisir plusieurs sujets comme l'attaque NPM qui a eu lieu en Septembre 2025, les attaques “Dependency Confusion”, attaque sur GitHub Actions (GhostAction) et les attaques via Quishing. </h3>
+</div>
+<div>
+<br><h3>phishing de Qix</h3>
+<br><p>En septembre 2025, Qix (Josh Junon) a eu son compte développeur npm compromis, il maintenait les librairies comme chalk, debug, ansi-style.</p>
+<br><p>Cette attaque a eu lieu via du phishing. Et visait des portemonnaies crypto.</p>
+<br><h3>Les risques:</h3>
+<ul>
+<li>Vol de fonds crypto (via des redirections d’adresses)</li>
+<li>Distraction difficile à détecter pour un utilisateur lambda, car le code malveillant agit lors de l’install ou au runtime du navigateur</li>
+<li>Propagation via les dépendances : beaucoup de projets JavaScript / Node dépendent, directement ou indirectement, de ces paquets populaires</li>
+<li>Confiance rompue dans la supply chain : un seul mainteneur compromis peut infecter un très grand nombre de projets</li>
+</ul>
+</div>
+
+
+<div>
+<br><h3>Les attaques Dependency Confusion</h3>
+<br><p>C’est une attaque où un pirate publie un package sur un registre public (npm, PyPI, etc.) ayant le même nom qu’un package interne (privé) utilisé par des entreprises. 
+Orca Security</p>
+
+<p>Les gestionnaires de paquets (npm, pip, etc.) cherchent d’abord sur les registres publics. Donc si un package public avec un nom identique existe, il peut être installé à la place du package privé légitime. 
+Orca Security</p>
+
+<p>Résultat : un code malveillant peut être injecté dans l’environnement de l’entreprise, car le package “trafiqué” vient d’un registre public, même si l’entreprise pensait utiliser un package interne.</p>
+
+<br><h3>Les risques:</h3>
+<ul>
+<li>Exécution de code malveillant dans des environnements d’entreprise</li>
+
+<li>Exfiltration de données sensibles</li>
+
+<li>Compromission de la chaîne de livraison logicielle (supply chain)</li>
+
+<li>Difficulté de détection si les équipes ne surveillent pas les dépendances “externales” ou “privées” vs publiques</li>
+
+</ul>
+</div>
+
+<div>
+<br><h3>Les attaques github Actions</h3>
+<br><p>GhostAction est une campagne d’attaque découverte par GitGuardian (2025)</p>
+<p>~327 comptes GitHub auraient été compromis, injectant worflows Github malveillant infectant ~817 dépots</p>
+<p>Le worklow exfiltrait des secrets (jetons npm, PyPI, DockerHub, AWS, etc.) a un serveur controllé par les attaquants.</p>
+<br><p>L’attaque a utilisé du code très simple (pas de dépendances externes) dans les workflows, ce qui la rendait difficile à repérer par des revues de sécurité rapides.
+<p>Le domaine d’exfiltration identifié : bold-dhawan.45-139-104-115.plesk.page selon GitGuardian.</p>
+<br><p>L’attaque serait à l’origine d’un CVE (CVE-2025-30066) lié à l’Action “tj-actions/changed-files”.</p>
+<p>Le point d’entrée aurait été un jeton d’accès personnel (PAT) compromis du bot @tj-actions-bot.</p>
+</div>
+
+<div>
+<br><h3>Le Quishing</h3>
+<br><p>Le Quishing est similaire a du Phishing, mais utilise des codes QR pour tromper les victimes.</p>
+<p>Le qr code sera utilisé pour rediriger les gens vers un site qui se fait passer pour une entreprise légitime. </p>
+<p>Cette page phishing peut demander des informations sensibles (identifiants, mot de passe, clé, paiement) ou déclencher un téléchargement.</p>
+<br><h3>Les risques:</h3>
+<ul>
+<li>Les utilisateurs sont souvent moins méfiants avec un QR code, car c’est “rapide” et “pratique”</li>
+<li>Le phishing via QR est plus difficile à détecter pour certaines personnes (URL masquée)</li>
+<li>Les attaques peuvent être combinées : QR → redirige vers un site qui installe un package malveillant</li>
+</ul>
+</div>
 
 </section>
     
